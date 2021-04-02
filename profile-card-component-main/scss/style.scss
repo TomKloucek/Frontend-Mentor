@@ -1,0 +1,142 @@
+$p-cyan: hsl(185, 75%, 39%);
+$p-blue: hsl(229, 23%, 23%);
+$dark-blue: hsl(227, 10%, 46%);
+
+@import 'mobile';
+
+@import url('https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&display=swap');
+
+* {
+  margin: 0 auto;
+}
+
+body {
+  height: 100vh;
+  background-color: $p-cyan;
+  overflow: hidden;
+  font-family: 'Kumbh Sans', sans-serif;
+  font-weight: 400;
+}
+
+.container {
+  background-color: #ffffff;
+  height: 370px;
+  width: 350px;
+  border-radius: 15px;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+
+  .bg {
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+  }
+}
+
+.leva {
+  left: -17%;
+  top: -75%;
+  z-index: -1;
+  position: absolute;
+}
+.prava {
+  z-index: -1;
+  position: absolute;
+  right: -17%;
+  bottom: -80%;
+}
+
+.inner-container {
+  display: flex;
+  justify-content: flex-start;
+  height: 230px;
+  width: inherit;
+  flex-direction: column;
+
+  .jmeno {
+    font-size: 18px;
+    margin-top: 70px;
+  }
+  .city {
+    margin-top: 10px;
+  }
+
+  b {
+    color: $p-blue;
+  }
+
+  p {
+    color: $dark-blue;
+  }
+
+  .city {
+    margin-top: 20px;
+  }
+
+  .kolecko {
+    position: absolute;
+    top: 90px;
+    border-radius: 50%;
+    height: 105px;
+    width: 105px;
+    background-color: white;
+    left: 35%;
+
+    .inner-kolecko {
+      overflow: hidden;
+      position: absolute;
+      top: 5px;
+      left: 5px;
+      border-radius: 50%;
+      height: 95px;
+      width: 95px;
+      background-color: rgb(134, 116, 116);
+      background-image: url('../images/image-victor.jpg');
+      background-position: center;
+      background-size: cover;
+    }
+  }
+}
+
+.info-container {
+  display: flex;
+  width: inherit;
+  justify-content: space-around;
+
+  .info-card {
+    display: flex;
+    flex-direction: column;
+    height: 25px;
+    width: 25px;
+
+    .info {
+      margin-top: 0;
+      font-size: 18px;
+    }
+
+    .ctg {
+      margin-top: 5px;
+      font-size: 10px;
+    }
+  }
+}
+
+@media screen and (max-width: 376px) {
+  body {
+    overflow: hidden;
+  }
+  .container {
+    transform: scale(0.96);
+  }
+  .leva {
+    left: -200%;
+    top: -75%;
+  }
+  .prava {
+    right: -200%;
+    bottom: -90%;
+  }
+}

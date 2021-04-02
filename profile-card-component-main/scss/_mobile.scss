@@ -1,0 +1,16 @@
+@media screen and (max-width: 376px) {
+  body {
+    overflow: hidden;
+  }
+  .container {
+    transform: scale(0.96);
+  }
+  .leva {
+    left: -75%;
+    top: -200%;
+  }
+  .prava {
+    right: -200%;
+    bottom: -90%;
+  }
+}
